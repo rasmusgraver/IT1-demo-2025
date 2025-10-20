@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildegalleri</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            background-color: aquamarine;
+            padding: 20px; /* Skaper litt luft "inni boksen" så det blir mer av bakgrunnsfargen */
+            border-radius: 10px;
+            font-style: italic; /* Det er sånn vi lager kursiv med css */
+        }
+        .container {
+            max-width: 800px; /* Ofte brukt, for å ikke "fylle hele skjermen" når den er veldig bred */
+            margin: auto; /* ... og da er det fint med like mye luft til høyre og venstre */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px; /* HUSK! Det er sånn vi skaper luft mellom elementene når vi har flex og grid! (ikke bruk margin) */
+        }
+
+        .container>div {
+            aspect-ratio: 1;
+        }
+
+        .stor {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        img {
+            display: block; /* Alltid lurt med display block på img, så blir verden enklere :) */
+            width: 100%;
+            height: 100%;
+            /* MERK! Man kan også sette aspect ratio her. I dette eksempelet har jeg satt det på "grid elementene" (div'ene)
+              PRØV deg frem! Se hva som funker best! 
+             aspect-ratio: 1; */
+            object-fit: cover; /* This is the magic: Gjør at bildene "fyller ramma" uten å strekke bildet */
+            border-radius: 10px;
+            transition: 0.5s; /* Dette gjør at det tar litt tid (halvt sekund) før effekten til :hover "gjøres ferdig" */
+        }
+
+        /* :hover er når vi tar musepekeren over elementet */
+        img:hover {
+            filter: brightness(120%); /* Spør chat om hvilke morsomme filtere som finnes! */
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Bildegalleri</h1>
+
+    <div class="container">
+        <div> <img src="bilder/cat.jpg" alt=""> </div>
+        <div> <img src="bilder/cat2.jpg" alt=""> </div>
+        <div> <img src="bilder/cat3.jpg" alt=""> </div>
+        <div> <img src="bilder/cat4.jpg" alt=""></div>
+        <div class="stor"> <img src="bilder/cat.jpg" alt=""> </div>
+        <div> <img src="bilder/cat2.jpg" alt=""> </div>
+        <div> <img src="bilder/cat3.jpg" alt=""> </div>
+        <div> <img src="bilder/cat4.jpg" alt=""></div>
+        <div> <img src="bilder/cat.jpg" alt=""> </div>
+        <div> <img src="bilder/cat2.jpg" alt=""> </div>
+        <div> <img src="bilder/cat3.jpg" alt=""> </div>
+        <div> <img src="bilder/cat4.jpg" alt=""></div>
+
+    </div>
+
+</body>
+
+</html>

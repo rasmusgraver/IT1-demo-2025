@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sammenligning flex og grid</title>
+</head>
+
+<style>
+    .flex {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .flex>div {
+        background-color: antiquewhite;
+        border: 2px solid black;
+        height: 100px;
+        flex: 1;
+    }
+
+
+    .grid {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid>div {
+        background-color: aquamarine;
+        border: 2px solid black;
+        height: 100px;
+    }
+</style>
+
+<body>
+
+    <h1>Using Flex:</h1>
+    <div class="flex">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <h1>Using Grid:</h1>
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+
+</html>

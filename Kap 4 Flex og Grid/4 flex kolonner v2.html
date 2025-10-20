@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enkel Flexbox Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #7bc5c6;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            text-shadow: 2px 2px 8px #3a4d5c;
+        }
+
+        .padding {
+            padding: 6px;
+        }
+
+        .row {
+            display: flex;
+            gap: 4px;
+            height: 200px;
+            border-radius: 20px;
+            overflow: hidden;
+            max-width: 700px;
+            margin: 10px auto;
+        }
+
+        .column {
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e3f2fd;
+            text-align: center;
+        }
+
+        /* Første rad: flex 2, 1, 1 */
+        .row1 .col1 {
+            flex: 2;
+        }
+
+        .row1 .col2 {
+            flex: 1;
+        }
+
+        .row1 .col3,
+        .row2 .col1 {
+            flex: 1;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(bilder/cat.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .tekst {
+            background: rgba(121, 152, 211, 0.5);
+            border-radius: 15px;
+            padding: 15px 25px;
+        }
+
+        /* Andre rad: flex 1, 1, 2 */
+        .row2 .col1 {
+            flex: 1;
+        }
+
+        .row2 .col2 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .row2 .col3 {
+            flex: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flexbox Layout</h1>
+
+    <div class="row row1">
+        <div class="column col1">
+            <img src="bilder/cat2.jpg" alt="">
+        </div>
+        <div class="column col2 padding">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, sapiente.
+        </div>
+        <div class="column col3">
+            <div class="tekst">
+                Kolonne 3
+            </div>
+        </div>
+    </div>
+
+    <div class="row row2">
+        <div class="column col1">
+            <div class="tekst">
+                Kolonne 1
+            </div>
+        </div>
+        <div class="column col2 padding">
+            <p> Kolonne 2 </p>
+            <img src="bilder/fotball.jpg" alt="">
+
+        </div>
+        <div class="column col3">
+            <img src="bilder/cat3.jpg" alt="">
+        </div>
+</body>
+
+</html>

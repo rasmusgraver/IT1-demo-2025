@@ -1,0 +1,71 @@
+/* Minimal CSS Reset */
+/* Box-sizing for easier layout */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dt,
+dd {
+    margin: 0;
+}
+
+/* Remove default padding from lists */
+ul,
+ol {
+    padding: 0;
+}
+
+/* Make images and videos responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Ensure form elements inherit font styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove default text decoration from links (optional) */
+a {
+    text-decoration: none;
+    color: inherit;
+    /* Inherit color from parent */
+}
+
+
+/* END Minimal CSS Reset */
+
+
+
+.stor {
+    width: 100%;
+    font-size: 50px;
+    background-color: lightcoral;
+    padding: 20px;
+}

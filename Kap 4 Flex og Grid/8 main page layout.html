@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page layout</title>
+
+    <style>
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+            display: grid;
+            grid-template-rows: auto 8fr 1fr;
+        }
+
+        .header {
+            background-color: rgb(101, 173, 183);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+        }
+
+        .header>img {
+            width: 15%;
+        }
+
+        .header>ul {
+            display: flex;
+            font-size: 20px;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .header li {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: rgb(71, 125, 147);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .article {
+            background-color: rgb(62, 126, 79);
+            display: flex;
+            padding: 0 20px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .article:nth-of-type(1),
+        .article:nth-of-type(4) {
+            background-color: rgb(121, 196, 141);
+        }
+
+        .article h2 {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="bilder/cat.jpg" alt="">
+        <ul>
+            <li>Om oss</li>
+            <li>Våre verdier</li>
+            <li>Prosjekter</li>
+            <li>Søk jobb</li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="article">
+            <h2>Artikkel 1 </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum ut repellat dicta in, beatae temporibus
+                possimus blanditiis vero explicabo.</p>
+        </div>
+        <div class="article">
+            <h2>Artikkel 2 </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum ut repellat dicta in, beatae temporibus
+                possimus blanditiis vero explicabo.</p>
+        </div>
+        <div class="article">
+            <h2>Artikkel 3 </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum ut repellat dicta in, beatae temporibus
+                possimus blanditiis vero explicabo.</p>
+        </div>
+        <div class="article">
+            <h2>Artikkel 4 </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum ut repellat dicta in, beatae temporibus
+                possimus blanditiis vero explicabo.</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Her er footer, med info om dem som laget siden etc
+    </div>
+
+</body>
+
+</html>

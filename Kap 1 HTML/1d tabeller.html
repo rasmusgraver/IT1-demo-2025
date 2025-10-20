@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabeller i HTML</title>
+    <style>
+        /* MERK: Bruker disse regnele som "default"
+           Setter ramme på tabellen, og også på hver celle.
+           Bruker border collapse for ikke å få "doble rammer" */
+        table {
+            border-collapse: collapse;
+            border: 3px solid blue;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+            background-color: lightblue;
+        }
+
+        /* MERK: Denne regelen er mer spesifikk: Den gjelder td elementer 
+           på "innsiden" av class overskrift */
+        .overskrift td, th {
+            background-color: antiquewhite;
+            font-weight: bold;
+        }
+
+        .hoyre {
+            text-align: right;
+        }
+
+        .blank {
+            background-color: white;
+            width: 30px;
+        }
+
+        .lunsj {
+            background-color: lightseagreen;
+            text-align: center;
+            font-style: italic;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 2px;
+        }
+        p {
+            margin: 2px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Top 5 filmer</h1>
+    <table>
+        <tr class="overskrift">
+            <td>Nr</td>
+            <td>Tittel</td>
+        </tr>
+        <tr>
+            <td class="hoyre">1</td>
+            <td>Gladiator</td>
+        </tr>
+        <tr>
+            <td class="hoyre">2</td>
+            <td>Matrix</td>
+        </tr>
+
+
+    </table>
+
+
+    <h1>Colspan - fyll 2 kolonner</h1>
+    <p>Vi kan la en celle fylle to kolonner med colspan</p>
+
+    <table>
+        <tr class="overskrift">
+            <td>Tid</td>
+            <td colspan="2">Mandag</td>
+            <td colspan="2">Tirsdag</td>
+            <td colspan="2">Onsdag</td>
+        </tr>
+
+        <tr>
+            <td>8:15 - 9:50</td>
+            <td colspan="2">Fag 1</td>
+            <td>Fag 2</td>
+            <td class="blank"></td>
+            <td>Fag 3</td>
+            <td>Norsk</td>
+        </tr>
+
+        <tr>
+            <td>11:30 - 12:30</td>
+            <td colspan="6" class="lunsj">Lunsj</td>
+
+        </tr>
+    </table>
+
+    <h1>Rowspan - fyll 2 eller flere rader</h1>
+    <p>Vi bruker rowspan for å få en celle til å fylle 2 eller flere rader</p>
+    <table>
+        <tr>
+            <th>Produkt</th>
+            <th>Kategori</th>
+            <th>Pris</th>
+        </tr>
+        <tr>
+            <td rowspan="3" class="highlight-rowspan">Elektronikk</td>
+            <td>Laptop</td>
+            <td>15 000 kr</td>
+        </tr>
+        <tr>
+            <!-- Merk: Ingen celle for "Elektronikk" her, siden den strekker seg ned -->
+            <td>Telefon</td>
+            <td>8 000 kr</td>
+        </tr>
+        <tr>
+            <!-- Samme her -->
+            <td>Tablet</td>
+            <td>5 000 kr</td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="highlight-rowspan">Klær</td>
+            <td>Skjorte</td>
+            <td>500 kr</td>
+        </tr>
+        <tr>
+            <td>Bukse</td>
+            <td>800 kr</td>
+        </tr>
+    </table>
+</body>
+
+</html>
