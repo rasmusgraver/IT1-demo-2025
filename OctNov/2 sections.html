@@ -1,149 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>2 Sections</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2 Sections</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            img {
+                display: block;
+                width: 100%;
+            }
 
-        img {
-            display: block;
-            width: 100%;
-        }
+            header {
+                background-color: rgba(0, 0, 0, 0.5);
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 40px;
+                color: white;
+            }
 
-        header {
-            background-color: rgba(0, 0, 0, 0.5);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            height: 40px;
-            color: white;
-        }
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-weight: bold;
+            }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            font-weight: bold;
-        }
+            section {
+                min-height: 100vh;
+                padding: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                padding-bottom: 200px;
+            }
 
-        section {
-            min-height: 100vh;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            padding-bottom: 200px;
-        }
+            section h1 {
+                font-family: "Montserrat", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 800;
+                font-style: normal;
+            }
 
-        section h1 {
-            font-family: "Montserrat", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 800;
-            font-style: normal;
-        }
+            section p {
+                margin-top: 100px;
+                font-size: 24px;
+                font-family: "Lato", sans-serif;
+                font-weight: 300;
+                font-style: normal;
+            }
 
-        section p {
-            margin-top: 100px;
-            font-size: 24px;
-            font-family: "Lato", sans-serif;
-            font-weight: 300;
-            font-style: normal;
-        }
+            section {
+                color: white;
+                background-image: url(bilder/dog1.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
 
-        section {
-            color: white;
-            background-image: url(bilder/dog1.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+            section p,
+            section h1 {
+                max-width: 800px;
+                padding: 20px;
+                color: white;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+                background: rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(3px);
+                border-radius: 20px;
+            }
 
-        section p,
-        section h1 {
-            max-width: 800px;
-            padding: 20px;
-            color: white;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-            background: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(3px);
-            border-radius: 20px;
-        }
+            #s1 {
+                background-image: url(bilder/dog2.jpg);
+            }
 
-        #s1 {
-            background-image: url(bilder/dog2.jpg);
-        }
+            #s2 {
+                background-image: url(bilder/cat.jpg);
+            }
+        </style>
+    </head>
 
+    <body>
+        <header>
+            <a href="#">Hjem</a>
+            <a href="#s1">Våre verdier</a>
+            <a href="#s2">Bærekraft</a>
+        </header>
 
-        #s2 {
-            background-image: url(bilder/cat.jpg);
-        }
-    </style>
-</head>
+        <main>
+            <section id="s1">
+                <h1>Våre verdier</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores, nostrum? Commodi cum veritatis, possimus
+                    consequatur praesentium unde laudantium non beatae,
+                    molestiae ut adipisci consectetur recusandae eligendi
+                    consequuntur at iure est error. Autem a, nulla dolorem quae
+                    vero facere exercitationem reiciendis illo ipsum velit
+                    explicabo ea, et maxime architecto laborum perferendis
+                    consectetur incidunt expedita necessitatibus quo doloremque
+                    fugiat neque nostrum quidem? Officia numquam natus rerum
+                    facere perferendis, est sapiente dolor officiis nesciunt
+                    veritatis labore dolores eveniet modi explicabo similique?
+                    Doloribus, est sed, cum quas minima ipsum cumque nisi ad
+                    quam delectus magni veritatis? Voluptatum cum eveniet dolor.
+                    Repudiandae corrupti ad modi?
+                </p>
+            </section>
 
-<body>
-
-
-    <header>
-        <a href="#">Hjem</a>
-        <a href="#s1">Våre verdier</a>
-        <a href="#s2">Bærekraft</a>
-    </header>
-
-    <main>
-
-
-        <section id="s1">
-            <h1>Våre verdier</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nostrum? Commodi cum veritatis,
-                possimus
-                consequatur praesentium unde laudantium non beatae, molestiae ut adipisci consectetur recusandae
-                eligendi
-                consequuntur at iure est error. Autem a, nulla dolorem quae vero facere exercitationem reiciendis illo
-                ipsum
-                velit explicabo ea, et maxime architecto laborum perferendis consectetur incidunt expedita
-                necessitatibus
-                quo doloremque fugiat neque nostrum quidem? Officia numquam natus rerum facere perferendis, est sapiente
-                dolor officiis nesciunt veritatis labore dolores eveniet modi explicabo similique? Doloribus, est sed,
-                cum
-                quas minima ipsum cumque nisi ad quam delectus magni veritatis? Voluptatum cum eveniet dolor.
-                Repudiandae
-                corrupti ad modi?</p>
-        </section>
-
-        <section id="s2">
-            <h1>Bærekraft</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nostrum? Commodi cum veritatis,
-                possimus
-                consequatur praesentium unde laudantium non beatae, molestiae ut adipisci consectetur recusandae
-                eligendi
-                consequuntur at iure est error. Autem a, nulla dolorem quae vero facere exercitationem reiciendis illo
-                ipsum
-                velit explicabo ea, et maxime architecto laborum perferendis consectetur incidunt expedita
-                necessitatibus
-                quo doloremque fugiat neque nostrum quidem? Officia numquam natus rerum facere perferendis, est sapiente
-                dolor officiis nesciunt veritatis labore dolores eveniet modi explicabo similique? Doloribus, est sed,
-                cum
-                quas minima ipsum cumque nisi ad quam delectus magni veritatis? Voluptatum cum eveniet dolor.
-                Repudiandae
-                corrupti ad modi?</p>
-        </section>
-
-    </main>
-
-</body>
-
+            <section id="s2">
+                <h1>Bærekraft</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores, nostrum? Commodi cum veritatis, possimus
+                    consequatur praesentium unde laudantium non beatae,
+                    molestiae ut adipisci consectetur recusandae eligendi
+                    consequuntur at iure est error. Autem a, nulla dolorem quae
+                    vero facere exercitationem reiciendis illo ipsum velit
+                    explicabo ea, et maxime architecto laborum perferendis
+                    consectetur incidunt expedita necessitatibus quo doloremque
+                    fugiat neque nostrum quidem? Officia numquam natus rerum
+                    facere perferendis, est sapiente dolor officiis nesciunt
+                    veritatis labore dolores eveniet modi explicabo similique?
+                    Doloribus, est sed, cum quas minima ipsum cumque nisi ad
+                    quam delectus magni veritatis? Voluptatum cum eveniet dolor.
+                    Repudiandae corrupti ad modi?
+                </p>
+            </section>
+        </main>
+    </body>
 </html>
