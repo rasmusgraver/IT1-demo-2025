@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Awesome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --bg: #121212;
+            /* hovedbakgrunn */
+            --surface: #1E1E1E;
+            /* kort/paneler */
+            --text: #E0E0E0;
+            /* vanlig tekst */
+            --text-dim: #AAAAAA;
+            /* sekundær tekst */
+            --accent: #3D82F0;
+            /* lenker / knapper */
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        li {
+            padding-left: 5px;
+            margin-left: 20px;
+            margin-top: 4px;
+        }
+
+        li.innrykk {
+            margin-left: 40px;
+            margin-bottom: 6px;
+        }
+
+
+        .stor i {
+            font-size: 50px;
+            margin: 20px;
+        }
+
+        .stor i:nth-of-type(even) {
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <h1> <i class="fa-solid fa-sun"></i> Font Awesome <i class="fa-solid fa-house"></i> </h1>
+
+
+        <p>Hvordan bruke Font Awesome</p>
+        <ul>
+            <li>Putt inn link i head i html doc - du ser lenken i dette dokumentet</li>
+            <li>Finn det ikonet du vil ha <a href="https://fontawesome.com/icons/sun?f=classic&s=solid"> her </a> </li>
+            <li class="innrykk">MERK: Du må bare velge de som ikke er "PRO"</li>
+            <li>Style ikonet ditt med font-size og color</li>
+            <li> <i class="fa-solid fa-face-smile"></i> Have Fun! <i class="fa-solid fa-circle-user"></i></li>
+        </ul>
+
+        <div class="stor">
+            <i class="fa-solid fa-thumbs-up "></i>
+            <i class="fa-solid fa-headphones "></i>
+            <i class="fa-regular fa-truck"></i>
+            <i class="fa-regular fa-face-smile"></i>
+            <i class="fa-regular fa-alarm-clock"></i>
+            <i class="fa-regular fa-image"></i>
+            <i class="fa-regular fa-file"></i>
+            <i class="fa-regular fa-camera"></i>
+            <i class="fa-solid fa-shield"></i>
+            <i class="fa-solid fa-fingerprint"></i>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
