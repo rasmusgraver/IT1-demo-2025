@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-auto-rows: 200px;
+            margin: auto;
+            width: fit-content;
+        }
+
+        .grid>div {
+            border: 1px solid black;
+            height: 100%;
+        }
+
+
+        @media (width < 650px) {
+
+            body {
+                background-color: lightcoral;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 200px);
+            }
+
+        }
+
+        @media (width < 460px) {
+
+            body {
+                background-color: lightskyblue;
+            }
+
+            .grid {
+                grid-template-columns: 200px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Media Queries</h1>
+
+    <p>Demo av Media Queries</p>
+
+    <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+
+</body>
+
+</html>
