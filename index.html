@@ -6,20 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT 1</title>
     <style>
+        :root {
+            /* Grunnfarger */
+            --color-bg: #F9FAFB;
+            --color-surface: #FFFFFF;
+            --color-border: #E5E7EB;
+
+            /* Tekst */
+            --color-text: #1F2937;
+            --color-text-dim: #6B7280;
+
+            /* Aksent og status */
+            --color-accent: #3B82F6;
+            --color-accent-hover: #2563EB;
+            --color-success: #10B981;
+            --color-warning: #F59E0B;
+            --color-error: #EF4444;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid;
+            border-color: var(--color-text-dim);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-accent);
+        }
+
+        a:hover {
+            color: var(--color-accent-hover);
+        }
+
         p {
             font-size: 20px;
+        }
+
+
+        li {
+            padding-left: 5px;
+            margin-left: 20px;
+            margin-top: 4px;
+        }
+
+        li.innrykk {
+            margin-left: 40px;
+            margin-bottom: 6px;
         }
     </style>
 </head>
 
 <body>
-    <h1>IT 1 Demo 2025</h1>
 
-    <p>Siste sider vi har jobbet med: </p>
-    <ul>
-        <li> <a href="OctNov/2 sections.html">2 sections med 100vh høyde</a> </li>
-        <li> <a href="OctNov/fontAwesome.html">Font Awesome</a> </li>
-    </ul>
+    <div class="container">
+
+
+        <h1>IT 1 Demo 2025</h1>
+
+        <p>Siste sider vi har jobbet med: </p>
+        <ul>
+            <li> <a href="OctNov/2 sections.html">2 sections med 100vh høyde</a> </li>
+            <li> <a href="OctNov/fontAwesome.html">Font Awesome</a> </li>
+        </ul>
+
+    </div>
 </body>
 
 </html>
