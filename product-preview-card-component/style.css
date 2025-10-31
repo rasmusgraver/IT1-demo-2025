@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+body {
+    height: 100vh;
+    font-size: 14px;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 440px;
+    display: flex;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.imgdiv {
+    width: 50%;
+}
+
+.textdiv {
+    width: 50%;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: "Fraunces", serif;
+    line-height: 1;
+    font-size: 24px;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 300;
+    font-size: 10px;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+    font-size: 12px;
+}
+
+#pricediv {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#pricediv .stor {
+    color: hsl(158, 36%, 37%);
+    font-size: 24px;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+
+#pricediv .gammel {
+    text-decoration: line-through;
+}
+
+button {
+    height: 34px;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 10px;
+    font-family: inherit;
+}
+
+button img {
+    width: 12px;
+}
