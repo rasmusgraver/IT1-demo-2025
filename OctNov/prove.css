@@ -1,0 +1,30 @@
+/*
+
+// HEADER
+- Bakgrunnsfarge  rgb(199, 160, 236)
+- logo-bilde: Width 50px
+
+// Section
+- høyde på 100vh
+
+// Tabellen
+- pakket inn i en div som har bakgrunn rgba(128, 0, 128, 0.5) (0.5 betyr 50% transparent)
+- selve tabellen har bakgrunn blueviolet (headeren) og purple (resten av tabellen)
+
+// GRID 
+- Bakgrunnsfarge  rgb(199, 160, 236)
+- boksene bakgrunnsfarge: "purple" 
+- grid kolonner 200px brede
+
+Ekstra utfordringer: 
+- lenkene ved hover: 
+  - bakgrunnsfarge: "purple" 
+
+- boksene ved hover: 
+  - bakgrunnsfarge: rgb(205, 122, 205)
+  - scale: 1.3
+
+- Skjerm mindre enn 650px: Bare én kolonne 
+
+
+*/
