@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Liten demo av accordion</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            p {
+                margin-top: 10px;
+            }
+            body {
+                background-color: lightcoral;
+                padding: 20px;
+            }
+            main {
+                max-width: 700px;
+                margin: 60px auto;
+                background-color: lightcyan;
+                padding: 40px;
+                border-radius: 20px;
+            }
+            #accordion {
+                background-color: rgb(172, 222, 222);
+                padding: 20px;
+                width: 80%;
+                margin: 40px auto;
+                border: 2px solid black;
+                border-radius: 20px;
+            }
+
+            #accordion.kort p {
+                height: 150px;
+                overflow: hidden;
+                mask-image: linear-gradient(to bottom, black 70%, transparent);
+                -webkit-mask-image: linear-gradient(
+                    to bottom,
+                    black 70%,
+                    transparent
+                );
+            }
+
+            button {
+                padding: 4px;
+                border-radius: 6px;
+                border: 1px solid grey;
+                width: 100px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Accordion med JS</h1>
+            <p>Bare en kjapp enkel intro til JS...</p>
+            <p>
+                En "accordion" er når man vil ha "les mer" knapp, som åpnes og
+                lukkes.
+            </p>
+            <p>
+                Her er deres første enkle intro til JS, bruk den om dere vil på
+                prosjektet deres. Prøv å forstå oppbygningen i så fall...
+            </p>
+
+            <div id="accordion" class="kort">
+                <button id="lesmer">Les mer</button>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quis, expedita! Possimus sit adipisci rem expedita, in animi
+                    quod beatae obcaecati magni ea dolor nihil est autem sunt
+                    quis alias. Sunt, aperiam! Obcaecati, sint sit. Accusamus,
+                    quas nostrum. Modi quam incidunt asperiores neque quas
+                    eligendi, facere, maxime corrupti iste facilis esse! Debitis
+                    excepturi, tempora voluptatibus ipsam, magni doloribus minus
+                    ea numquam recusandae sunt rerum. Illo officiis quis eos
+                    pariatur dicta placeat est. Adipisci doloribus maxime, ex
+                    quidem recusandae dicta atque pariatur totam! Quo maxime,
+                    eum consequuntur soluta corporis odio nesciunt. Aperiam
+                    praesentium assumenda eius officia odit numquam vel delectus
+                    eum consequuntur soluta corporis odio nesciunt. Aperiam
+                    praesentium assumenda eius officia odit numquam vel delectus
+                    fuga perspiciatis!
+                </p>
+            </div>
+        </main>
+
+        <script>
+            const knappElm = document.getElementById("lesmer")
+            const accordionElm = document.getElementById("accordion")
+            let lesMer = true
+            function accordion() {
+                accordionElm.classList.toggle("kort")
+
+                // Setter les mer til "motsatt" av det den var (true settes til false og motsatt)
+                lesMer = !lesMer
+                // Endre teksten på "les mer" knappen:
+                if (lesMer) {
+                    knappElm.innerHTML = "Les Mer"
+                } else {
+                    knappElm.innerHTML = "Les Mindre"
+                }
+            }
+
+            knappElm.addEventListener("click", accordion)
+        </script>
+    </body>
+</html>
