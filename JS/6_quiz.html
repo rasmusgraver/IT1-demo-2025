@@ -19,15 +19,18 @@
 
         body {
             height: 100vh;
-
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
         }
 
         body>div {
-            max-width: 700px;
+            width: min(700px, 90%);
             padding: 20px;
             border: 2px solid black;
             border-radius: 20px;
-            margin: 20px auto;
         }
 
         h3 {
@@ -53,9 +56,9 @@
 
     <div id="spm2">
         <h3>Hva er 2 + 2 </h3>
+        <button onclick="sjekkSvarMedId('spm2', false)">2</button>
         <button onclick="sjekkSvarMedId('spm2', true)">4</button>
         <button onclick="sjekkSvarMedId('spm2', false)">6</button>
-        <button onclick="sjekkSvarMedId('spm2', false)">2</button>
     </div>
 
     <div>
