@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vårt første lille spill</title>
+    <style>
+        #ramme {
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        #katt {
+            width: 100px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vårt første lille spill</h1>
+
+    <div id="ramme">
+        <img id="katt" src="bilder/cat.png" alt="">
+    </div>
+
+    <script>
+        // Vi "får en referanse" til img-elementet vårt slik:
+        const kattElm = document.getElementById("katt")
+
+        // Et par "globale variable" som holder styr på katten vår:
+        topp = 10
+        left = 10
+        fart = 40 // Hvor mye vi flytter katten med for hvert klikk
+
+        // Add event listener: Altså at når man klikker på elementet, så "skjer det noe":
+        document.addEventListener("keydown", function (event) {
+            // console.log("Du trykket på:", event.key)
+            if (event.key == "ArrowUp") {
+                topp -= fart
+            }
+            if (event.key == "ArrowDown") {
+                topp += fart
+            }
+            if (event.key == "ArrowLeft") {
+                left -= fart
+            }
+            if (event.key == "ArrowRight") {
+                left += fart
+            }
+
+            console.log("Top", topp, "left", left)
+            // Til slutt:
+            // Setter katten "der den skal være" (husk den har position absolute)
+            kattElm.style.left = left + "px"
+            kattElm.style.top = topp + "px"
+        }) // Merk at den får litt spesielle klammer her: sett musepekeren på hver av dem, og se hvor de begynner
+
+    </script>
+
+</body>
+
+</html>

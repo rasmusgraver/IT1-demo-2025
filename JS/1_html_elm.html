@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML elementer med JS</title>
+</head>
+
+<body>
+    <h1 id="overskrift">HTML Elementer med JS</h1>
+    <div id="tekstContainer">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    </div>
+
+    <script>
+        // "Jeg tar tak i elementet slik":
+        overskriftElement = document.getElementById("overskrift")
+        console.log(overskriftElement)
+
+        overskriftElement.style.color = "red"
+        overskriftElement.style.fontSize = "40px"
+        overskriftElement.style.display = "none"
+        overskriftElement.style.display = "block"
+
+        tekstContainerElm = document.getElementById("tekstContainer")
+        console.log(tekstContainerElm)
+
+
+    </script>
+</body>
+
+</html>

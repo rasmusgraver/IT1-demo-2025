@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS intro</title>
+    <style>
+        #bil {
+            width: 200px;
+            transform: scaleX(-1);
+            position: absolute;
+            left: 0;
+            top: 140px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JS Intro</h1>
+
+    <p>Trykk på bilen for å flytte den:</p>
+
+    <img src="bilder/bil1.png" id="bil" />
+
+    <script>
+        // Vi "får en referanse" til img-elementet vårt slik:
+        const bilElm = document.getElementById("bil")
+        console.log(bilElm)
+
+        // Et par "globale variable" som holder styr på bilen vår:
+        left = 0 // Avstanden til venstre for bilen
+        hoyre = true // Om den "peker mot" høyre eller ikke (true/false)
+
+        // Add event listener: Altså at når man klikker på elementet, så "skjer det noe":
+        bilElm.addEventListener("click", function () {
+            if (hoyre) {
+                left += 20
+                // Om vi har kommet helt til høyre, så er det på tide å "flippe" bilen:
+                if (left > 120) {
+                    hoyre = false
+                    bilElm.style.transform = "scaleX(1)"
+                }
+            } else {
+                left -= 20
+            }
+            // Dette gjør vi uansett om vi er på vei mot høyre eller venstre:
+            // Setter bilen "der den skal være" (husk den har position absolute)
+            bilElm.style.left = left + "px"
+        })
+    </script>
+</body>
+
+</html>

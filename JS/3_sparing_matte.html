@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparing i JS</title>
+</head>
+
+<body>
+
+    <script>
+        beløp = 1000 // Beløpet vi starter med
+        v = 1.05 // 5% årlig rente
+        år = 0 // En teller som holder styr på antall år det tar
+        while (beløp < 10000) {
+            beløp *= v // beløpet ganges med vekstfaktoren hvert år
+            år += 1 // og antall år øker med 1
+            console.log(beløp)
+        }
+        // While-løkka er ferdig: Vi har mer enn 10000 kr på konto:
+        console.log("Det tok", år, "år. Vi har nå", beløp, "på konto.")
+    </script>
+</body>
+
+</html>
