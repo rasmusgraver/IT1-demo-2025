@@ -46,7 +46,7 @@
         }
 
         button {
-            background-color: aliceblue;
+            background-color: lightblue;
         }
     </style>
 </head>
@@ -69,7 +69,12 @@
     <div>
         <h3>Hvor mange planeter er det solsystemet</h3>
         <input type="text">
-        <button>Svar</button>
+        <button onclick="sjekkSvarMedInput(8, this)">Svar</button>
+    </div>
+    <div>
+        <h3>Hva er 3+4</h3>
+        <input type="text">
+        <button onclick="sjekkSvarMedInput(7, this)">Svar</button>
     </div>
 
     <script>
@@ -89,6 +94,17 @@
             } else {
                 elm.style.backgroundColor = "red"
             }
+        }
+
+        function sjekkSvarMedInput(fasit, elm) {
+            const inputElm = elm.previousElementSibling
+            const svar = inputElm.value
+            if (svar == fasit) {
+                elm.parentElement.style.backgroundColor = "green"
+            } else {
+                elm.parentElement.style.backgroundColor = "red"
+            }
+
         }
 
     </script>
