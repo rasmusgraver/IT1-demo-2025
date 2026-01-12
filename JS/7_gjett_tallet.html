@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klikk meg</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .container {
+            width: min(400px, 90%);
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        button,
+        input {
+            font-size: 40px;
+            padding: 20px;
+            border-radius: 20px;
+            max-width: 40%;
+        }
+
+        button {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Gjett tallet!</h1>
+        <p id="hint">hint kommer her</p>
+        <input id="gjett" type="number" placeholder="tall">
+        <button onclick="sjekkSvar()">Sjekk</button>
+    </div>
+
+    <script>
+        const fasit = Math.floor(Math.random() * 100)
+        console.log("Fasiten er", fasit)
+        const inputElement = document.getElementById("gjett")
+        const hintElement = document.getElementById("hint")
+
+
+        function sjekkSvar() {
+            console.log("Du gjettet", inputElement.value)
+            const svar = Number(inputElement.value)
+            if (fasit > svar) {
+                hintElement.innerHTML = "Du må gjette høyere..."
+            } else if (fasit < svar) {
+                hintElement.innerHTML = "Du må gjette lavere..."
+            } else {
+                hintElement.innerHTML = "YES!"
+                inputElement.parentElement.style.backgroundColor = "green"
+            }
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>
