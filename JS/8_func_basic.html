@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Funksjoner</title>
+</head>
+<body>
+    <h1>Basic Funksjoner</h1>
+
+    <p id="hei"></p>
+    <button id="knapp"></button>
+
+    <script>
+        function leggSammen(a,b) {
+            console.log("Summen av", a, "og", b, "er", (a+b))
+        }
+        leggSammen(1,1)
+        leggSammen(4,3)
+        leggSammen(6, 7)
+
+
+        const elm = document.getElementById("hei")
+        console.log(elm)
+        elm.innerHTML = "Hei på deg"
+
+        const knappElm = document.getElementById("knapp")
+        console.log(knappElm)
+        knappElm.innerHTML = "Klikk meg"
+
+
+        function skiftFarge(element, farge) {
+            element.style.color = farge
+        }
+
+        skiftFarge(knappElm, "blue")
+        skiftFarge(elm, "red")
+
+
+    </script>
+</body>
+</html>
