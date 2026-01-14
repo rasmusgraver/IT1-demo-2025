@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body.dark {
+            background-color: black;
+            color: wheat;
+        }
+
+        .dark #elm1 {
+            background-color: #222
+        }
+
+        #elm1 {
+            width: 300px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: antiquewhite;
+            margin: 100px auto;
+        }
+
+        #elm1.dark {
+            background-color: blueviolet;
+            color: lightcyan;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        i {
+            font-size: 30px;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- HUSK - må ha paranteser bak funksjonsnavnene her! -->
+        <i class="fa-regular fa-moon" onclick="mork()"></i>
+        <i class="fa-regular fa-sun" onclick="lys()"></i>
+    </header>
+    <main>
+        <div id="elm1" onclick="skiftFarge(this)">
+            <h1>Classlist Demo</h1>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus eius reiciendis inventore temporibus, eum
+            dicta. Rerum beatae quis explicabo ipsam a. Pariatur beatae laudantium nesciunt placeat nemo possimus non
+            dolore.</p>
+    </main>
+    <script>
+        function skiftFarge(element) {
+            element.classList.toggle("dark")
+        }
+
+        // MERK: Her bruker vi ikke toggle, men add og remove: Vi ønsker
+        // at det skal være mulig å trykke flere ganger på månen, og den
+        // forblir bare "dark"
+        function mork() {
+            document.body.classList.add("dark")
+        }
+        function lys() {
+            document.body.classList.remove("dark")
+        }
+    </script>
+
+</body>
+
+</html>
