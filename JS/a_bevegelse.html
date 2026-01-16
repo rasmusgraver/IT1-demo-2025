@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bevegelse</title>
+    <style>
+        img {
+            display: block;
+            width: 100px;
+            position: absolute;
+            top: 200px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bevegelse med JS</h1>
+    <img id="bilde" src="bilder/balloons.png">
+
+    <script>
+        const bildeElm = document.getElementById("bilde")
+        let venstre = 50
+        let xfart = 3
+        function flyttBilde() {
+            venstre += xfart
+            bildeElm.style.left = venstre + "px"
+            // (Ballongen er 100px i bredden)
+            if (venstre >= window.innerWidth - 100
+                || venstre <= 0) {
+                // Snu retning på farten:
+                xfart = -xfart
+            }
+
+        }
+        setInterval(flyttBilde, 10);
+
+
+    </script>
+</body>
+
+</html>
