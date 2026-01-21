@@ -9,7 +9,12 @@
 
 <body>
 
+    <p>Åpne inspect og se i consollet</p>
+    <p>Klikk deg inn her og trykk på tast opp og ned</p>
+
     <script>
+        // Bare en liten demo av at vi kan gjøre ting med "keydown event"
+        // => Registrere når brukeren trykker på en tast (MERK: Fokus må være i nettleseren for at det skal funke)
         document.addEventListener("keydown", function (event) {
             console.log("Du trykket på:", event.key)
 
