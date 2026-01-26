@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SjakkBrett</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #sjakkbrett {
+                display: grid;
+                grid-template-columns: repeat(8, 80px);
+                grid-template-rows: repeat(8, 80px);
+                border: 5px solid black;
+                margin: 20px auto;
+                width: fit-content;
+            }
+
+            #sjakkbrett > div {
+                border: 1px solid grey;
+                padding: 6px;
+            }
+
+            div {
+                background-color: aliceblue;
+            }
+
+            div.active {
+                background-color: lightblue;
+            }
+            div.black {
+                background-color: pink;
+            }
+            div.black.active {
+                background-color: hotpink;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="sjakkbrett">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <script>
+            const ruter = document.querySelectorAll("#sjakkbrett > div")
+            console.log(ruter)
+
+            console.log("Første rute:", ruter[0])
+            console.log("Femte rute:", ruter[4])
+
+            let ruteNr = 1
+            let kolonneNr = 1
+            let radNr = 1
+            ruter.forEach(function (element) {
+                element.innerHTML = "Rute " + ruteNr
+                element.innerHTML += "<br>Kol " + kolonneNr
+                element.innerHTML += "<br>Rad " + radNr
+
+                // Hvor mye er igjen i "rest" når man deler på 2 (partall eller oddetall)
+                if ((radNr + kolonneNr) % 2 == 0) {
+                    element.classList.add("black")
+                }
+
+                element.onclick = function () {
+                    element.classList.toggle("active")
+                }
+
+                ruteNr += 1
+                kolonneNr += 1
+                if (kolonneNr > 8) {
+                    kolonneNr = 1
+                    radNr += 1
+                }
+            })
+        </script>
+    </body>
+</html>
