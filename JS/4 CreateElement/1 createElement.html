@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+
+<body>
+    <h1>Create Element</h1>
+
+    <script>
+        // Lag et p element:
+        const pElement = document.createElement("p")
+        // Gi det innhold og stil:
+        pElement.innerHTML = "Jeg er laget av JS!"
+        pElement.style.color = "green"
+        // HUSK! Plasser elementet et sted på siden:
+        document.body.appendChild(pElement)
+
+    </script>
+</body>
+
+</html>

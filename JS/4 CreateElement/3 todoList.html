@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        .todoliste {
+            background-color: pink;
+            border-radius: 20px;
+            padding: 20px;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TODO List</h1>
+    <input type="text">
+    <button onclick="lagTodo()">Lag Todo</button>
+    <ul class="todoliste">
+    </ul>
+
+    <script>
+        const inputElement = document.querySelector("input")
+        const todolisteDiv = document.querySelector(".todoliste")
+
+        function lagTodo() {
+            // Lag et html-element:
+            const todoElement = document.createElement("li")
+            // Hent verdien fra input feltet:
+            todoElement.innerHTML = inputElement.value
+            todoElement.onclick = function () {
+                todoElement.classList.add("done")
+            }
+            // Tøm input feltet:
+            inputElement.value = ""
+            // HUSK! Plasser elementet et sted på siden:
+            todolisteDiv.appendChild(todoElement)
+        }
+    </script>
+</body>
+
+</html>
