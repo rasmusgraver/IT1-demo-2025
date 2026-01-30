@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flytt</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boks {
+            position: relative;
+            border: 2px solid black;
+            width: 400px;
+            height: 400px;
+        }
+
+        img {
+            display: block;
+            width: 200px;
+            position: absolute;
+            top: 100px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boks">
+        <img src="bilder/f1.png" alt="">
+    </div>
+
+    <script>
+        const boksElement = document.querySelector("body > div")
+        const bildeElement = document.querySelector(".boks img")
+        boksElement.addEventListener("click", klikk)
+
+        function klikk(event) {
+            const venstre = Math.floor(Math.random() * 200)
+            const topp = Math.floor(Math.random() * 300)
+            bildeElement.style.left = venstre + "px"
+            bildeElement.style.top = topp + "px"
+
+            console.log(event)
+            if (event.shiftKey == true) {
+                // skift bakgrunnsfarge til blå
+                boksElement.style.backgroundColor = "blue"
+            } else {
+                // Skift til hvit
+                boksElement.style.backgroundColor = "white"
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,38 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Endre Src til et bilde</title>
-    <style>
-        img {
-            width: 200px;
-            height: 200px;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Endre src til et bilde</h1>
-    <img src="bilder/bil1.png" onclick="skiftBilde(this)" alt="en turkis lastebil">
-
-    <script>
-        // Min egen "toggle" (true/false):
-        let bilBilde = true
-
-        function skiftBilde(imgElement) {
-            if (bilBilde == true) {
-                imgElement.src = "bilder/balloons.png"
-                bilBilde = false
-            } else {
-                imgElement.src = "bilder/bil1.png"
-                bilBilde = true
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Endre Src til et bilde</title>
+        <style>
+            img {
+                width: 200px;
+                height: 200px;
             }
-        }
+        </style>
+    </head>
 
-    </script>
-</body>
+    <body>
+        <h1>Endre src til et bilde</h1>
+        <img
+            src="bilder/bil1.png"
+            onclick="skiftBilde(this)"
+            alt="en turkis lastebil"
+        />
 
+        <script>
+            // Min egen "toggle" (true/false):
+            let bilBilde = true
 
+            function skiftBilde(imgElement) {
+                if (bilBilde == true) {
+                    imgElement.src = "bilder/balloons.png"
+                    imgElement.alt = "Ballonger!"
+                    bilBilde = false
+                } else {
+                    imgElement.src = "bilder/bil1.png"
+                    imgElement.alt = "En turkis lastebil"
+                    bilBilde = true
+                }
+            }
+        </script>
+    </body>
 </html>
