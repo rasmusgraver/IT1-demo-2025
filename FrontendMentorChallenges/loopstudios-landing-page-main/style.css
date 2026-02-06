@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Alata", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+section {
+    min-height: 400px;
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    background-image: url(images/desktop/image-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.hero::before {
+    /* mørkt lag "oppå" bakgrunnsbildet - semi transparent */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+section>*,
+footer>* {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+    z-index: 4;
+}
+
+.hero>* {
+    /* Disse tingene må ligge oppå det mørke laget */
+    z-index: 4;
+}
+
+h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 70px;
+    text-transform: uppercase;
+    padding: 50px;
+    border: 1px solid white;
+    max-width: 660px;
+}
+
+h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img.logo {
+    width: 200px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav li {
+    list-style: none;
+}
+
+.mid_align {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.vr p {
+    color: hsl(0, 0%, 50%);
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 10px 40px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .left,
+footer .right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer img.logo {
+    width: 140px;
+}
+
+footer .icons {
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+}
+
+footer .icons img {
+    width: 20px;
+}
+
+footer p {
+    color: hsl(0, 0%, 50%);
+}
+
+footer p,
+footer li {
+    font-size: 13px;
+}
