@@ -213,8 +213,14 @@ footer li {
         height: 20px;
     }
 
+    .vr img {
+        width: 80%;
+    }
+
     .header1 {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .header1 .text {
