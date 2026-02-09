@@ -18,8 +18,15 @@
 <body>
 
   <section class="hero">
-    <nav>
-      <img class="logo" src="images/logo.svg" alt="">
+    <header class="mobile-only">
+      <img class="logo" src="images/logo.svg">
+      <img class="burger" src="images/icon-hamburger.svg">
+    </header>
+    <nav class="">
+      <div class="flex">
+        <img class="logo" src="images/logo.svg" alt="">
+        <img class="cross" src="images/icon-close.svg" alt="">
+      </div>
       <ul>
         <li> About</li>
         <li> Careers</li>
@@ -35,7 +42,7 @@
 
   <section class="vr">
 
-    <div class="header">
+    <div class="header1">
       <img src="images/desktop/image-interactive.jpg" alt="">
       <div class="text">
         <h2>
@@ -54,7 +61,7 @@
 
   <section>
 
-    <div class="header">
+    <div class="header2">
       <h2>
         Our creations
       </h2>
@@ -107,6 +114,15 @@
   </footer>
 
 
+  <script>
+    const headerNavElm = document.querySelector(".hero nav")
+    document.querySelector(".burger").addEventListener("click", function () {
+      headerNavElm.classList.add("show")
+    })
+    document.querySelector(".cross").addEventListener("click", function () {
+      headerNavElm.classList.remove("show")
+    })
+  </script>
 
 </body>
 

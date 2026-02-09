@@ -17,8 +17,25 @@ img {
     width: 100%;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.cross {
+    display: none;
+}
+
 section {
     min-height: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .hero {
@@ -47,6 +64,8 @@ footer>* {
     margin: auto;
     width: 100%;
     z-index: 4;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .hero>* {
@@ -97,14 +116,26 @@ nav li {
     height: 100%;
 }
 
+.vr img {
+    width: 70%;
+}
+
 .vr p {
     color: hsl(0, 0%, 50%);
     line-height: 1.6;
 }
 
-.header {
+.header1,
+.header2 {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header1 .text {
+    background-color: white;
+    padding: 40px;
+    margin-left: -200px;
 }
 
 .box {
@@ -152,4 +183,75 @@ footer p {
 footer p,
 footer li {
     font-size: 13px;
+}
+
+@media (width < 900px) {
+
+    .mobile-only {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero {
+        padding-top: 30px;
+    }
+
+    h1 {
+        font-size: 60px;
+        padding: 30px;
+    }
+
+    .cross {
+        display: block;
+        width: 30px;
+    }
+
+
+    header .burger {
+        width: 30px;
+        height: 20px;
+    }
+
+    .header1 {
+        flex-direction: column;
+    }
+
+    .header1 .text {
+        margin-left: 0;
+    }
+
+    .hero nav {
+        display: none;
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 30px;
+        gap: 100px;
+    }
+
+    .hero nav.show {
+        display: flex;
+    }
+
+    .hero ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .hero li {
+        text-transform: uppercase;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        font-size: 30px;
+    }
 }
