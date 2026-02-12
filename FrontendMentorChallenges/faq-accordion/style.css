@@ -1,0 +1,55 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Stjerne-regelen vår */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Fargene fra style-guide */
+:root {
+    --Purple100: hsl(276, 41%, 97%);
+    --Purple600: hsl(292, 16%, 49%);
+    --Purple950: hsl(292, 42%, 14%);
+}
+
+body {
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: repeat-x;
+    background-color: var(--Purple100);
+}
+
+.container {
+    max-width: 500px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 200px auto;
+}
+
+img {
+    width: 30px;
+}
+
+article p {
+    display: none;
+}
+article.show p {
+    display: block;
+}
+article .minus {
+    display: none;
+}
+article.show .minus {
+    display: block;
+}
+article .plus {
+    display: block;
+}
+article.show .plus {
+    display: none;
+}
+
