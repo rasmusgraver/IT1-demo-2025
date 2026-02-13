@@ -12,3 +12,26 @@ img {
 body {
     background-color: lightblue;
 }
+
+.doors {
+    height: 100vh;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.door {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.door>img {
+    grid-area: 1/1;
+}
+
+.goat {
+    width: 60%;
+    z-index: -1;
+}
