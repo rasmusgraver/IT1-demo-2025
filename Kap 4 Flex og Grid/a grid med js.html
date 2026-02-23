@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid challenge med litt JS</title>
+    <link rel="stylesheet" href="a grid.css" />
+</head>
+
+<body>
+    <div class="grid">
+        <div class="one"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="two"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="three"></div>
+    </div>
+
+    <script>
+        const allDivs = document.querySelectorAll(".grid > div")
+        console.log(allDivs)
+
+        allDivs.forEach(divElm => {
+
+            divElm.addEventListener("click", function () {
+                divElm.classList.toggle("grey")
+            })
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

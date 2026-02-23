@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: lightblue;
     display: flex;
@@ -18,23 +19,28 @@ body {
     background-color: white;
 }
 
-.grid > div {
+.grid>div {
     border: 1px solid black;
 }
-.grid > div.active {
+
+.grid>div.grey {
     background-color: grey;
 }
+
 .one,
 .two,
 .three {
     grid-column: span 2;
 }
+
 .one {
     background-color: greenyellow;
 }
+
 .two {
     background-color: hotpink;
 }
+
 .three {
     background-color: blueviolet;
 }
