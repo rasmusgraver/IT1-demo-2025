@@ -54,24 +54,16 @@
         console.log(kortstokk)
         console.log(kortstokk[51]) // Se hva kort nr 52 er
 
-
-        // Gjør selv: "pop" ett kort og lag element og appendChild med det.
-        // Dette er basisen for kortstokk-oppgaver. Så kan du lage spill og kabaler etc :)
-
-
-
+        // Vår container, der vi vil putte kortene (appendChild)
         const containerElm = document.querySelector(".container")
 
-        for (let i = 0; i < 12; i++) {
+        for (let i = 0; i < 5; i++) {
             // "Popper" ut det siste kortet fra kortstokken:
             const kortnavn = kortstokk.pop()
             const kortBilde = document.createElement("img")
             kortBilde.src = kortnavn
             containerElm.appendChild(kortBilde)
         }
-
-
-
 
 
     </script>
