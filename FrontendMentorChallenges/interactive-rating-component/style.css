@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Orange500: hsl(25, 97%, 53%);
+    --White: hsl(0, 100%, 100%);
+    --Grey500: hsl(217, 12%, 63%);
+    --Grey900: hsl(213, 19%, 18%);
+    --Grey920: hsl(215, 15%, 15%);
+    --Grey950: hsl(216, 12%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: "Overpass", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container {
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, var(--Grey920), var(--Grey950));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+
+.stardiv {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--Grey900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+p {
+    color: var(--Grey500);
+    line-height: 1.5;
+}
+
+
+.rating {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.rating span {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-weight: 700;
+    color: var(--Grey500);
+    background-color: var(--Grey900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: var(--Orange500);
+    color: var(--Grey950);
+    padding: 12px 20px 10px;
+    border-radius: 20px;
+    font-family: "Overpass", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    border: none;
+}
+
+
+
+.thankyou {
+    display: none;
+    align-items: center;
+}
+
+.thankyou img {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.thankyou p {
+    text-align: center;
+}
+
+.thankyou_rating {
+    color: var(--Orange500);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    background-color: var(--Grey900);
+    border-radius: 10px;
+}
