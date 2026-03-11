@@ -18,6 +18,8 @@ function fjernActiveFraAlle() {
     })
 }
 
-document.querySelector("button").addEventListener("click", function() {
-    
+document.querySelector("button").addEventListener("click", function () {
+    document.getElementById("page1").style.display = "none"
+    document.getElementById("page2").style.display = "flex"
+    document.getElementById("ratingTall").innerHTML = ratingTall
 })
