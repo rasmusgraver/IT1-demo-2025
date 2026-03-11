@@ -82,6 +82,17 @@ p {
     justify-content: center;
 }
 
+.rating span:hover {
+    background-color: var(--Orange500);
+    color: var(--Grey950);
+}
+
+.rating span.active {
+    background-color: var(--White);
+    color: var(--Grey950);
+}
+
+
 button {
     background-color: var(--Orange500);
     color: var(--Grey950);
@@ -94,6 +105,9 @@ button {
     border: none;
 }
 
+button:hover {
+    background-color: white;
+}
 
 
 .thankyou {
