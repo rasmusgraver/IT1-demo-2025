@@ -18,4 +18,13 @@ function updateCounter() {
     const counterElm = document.getElementById("counter")
     const antall = document.querySelectorAll(".boks.unread").length
     counterElm.innerHTML = antall
+
+    if (antall == 0) {
+        counterElm.style.display = "none"
+    } else {
+        counterElm.style.display = "inline"
+    }
 }
+
+// MERK: Start med å oppdatere counter så den er rett fra start:
+updateCounter()
