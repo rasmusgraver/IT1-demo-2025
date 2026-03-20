@@ -94,15 +94,6 @@ h2 {
   background-color: var(--light-grayish-blue-1);
 }
 
-.boks.unread>div>p:first-of-type::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-left: 3px;
-  background-color: var(--red);
-  border-radius: 50%;
-}
 
 .bold {
   color: var(--very-dark-blue);
