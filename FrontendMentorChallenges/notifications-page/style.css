@@ -94,6 +94,16 @@ h2 {
   background-color: var(--light-grayish-blue-1);
 }
 
+.boks.unread p:first-of-type::after {
+  content: "";
+  background-color: var(--red);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  margin-left: 3px;
+}
+
 
 .bold {
   color: var(--very-dark-blue);
