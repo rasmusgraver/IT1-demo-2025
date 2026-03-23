@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+header {
+    background-color: black;
+    height: 100px;
+}
+
+#hero {
+    background-image: url(bilder/joachim.webp);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero h1 {
+    color: white;
+    font-size: 100px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+section {
+    background-color: darkblue;
+    min-height: 400px;
+}
