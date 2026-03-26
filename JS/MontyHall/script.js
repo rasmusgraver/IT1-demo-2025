@@ -23,6 +23,7 @@ function klikkDor(event) {
     console.log(event.target)
     const dorImg = event.target
     dorImg.src = "media/semiclosed.png"
+    let lydFil = "goat.mp3"
 
     const goatImg = dorImg.nextElementSibling
     console.log(goatImg.src)
@@ -33,9 +34,18 @@ function klikkDor(event) {
         goatImg.style.zIndex = "3"
         goatImg.style.left = "-" + 40 * vinnerTall + "%" // Måtte "hacke" til litt her - for at bilden skulle flyte ut på rett sted.
         goatImg.style.top = "0"
+        lydFil = "success.mp3"
     }
 
     setTimeout(openDor, 600, dorImg)
+
+    // Spill lyd
+    const audioElem = document.createElement("audio");
+    audioElem.src = "media/" + lydFil;
+    audioElem.autoplay = true;
+    audioElem.play();
+    document.body.appendChild(audioElem);
+
 }
 
 function openDor(dorImg) {
