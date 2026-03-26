@@ -10,29 +10,54 @@ img {
 }
 
 body {
-    background-color: lightblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+button {
+    background-color: bisque;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 60px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.doorContainer {
+    margin-left: -3000px;
+    transition: 1s;
+    height: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.doorContainer .text {
+    font-size: 30px;
 }
 
 .doors {
-    height: 100vh;
     display: flex;
-    gap: 40px;
+    align-items: center;
     justify-content: center;
-    align-items: center;
+    gap: 30px;
+    padding: 20px 40px;
 }
 
-.door {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-}
-
-.door>img {
-    grid-area: 1/1;
+.doors>div {
+    position: relative;
 }
 
 .goat {
-    width: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 40px;
     z-index: -1;
+    transition: 1s;
 }

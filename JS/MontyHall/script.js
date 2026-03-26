@@ -1,43 +1,51 @@
-// Globale variable:
-let doorOpened = false
+let harValgt = false
 
-// Finn vinnertallet:
-const vinnertall = Math.floor(Math.random() * 3)
-console.log("Vinnertallet er", vinnertall)
+const vinnerTall = Math.floor(Math.random() * 3) + 1
+console.log("Vinnertaller er ", vinnerTall)
 
-// Add event listener (click) på hver dør:
-const allDoors = document.querySelectorAll(".door")
-console.log(allDoors)
+// Hent opp dør nr "vinnerDoer" og bytt geit-bilde til ferrari
+const vinnerBilde = document.querySelector("#door" + vinnerTall + " > .goat ")
+console.log(vinnerBilde)
+vinnerBilde.src = "media/ferrari.png"
 
-// "Ta tak i" vinnerdøren:
-const vinnerDoor = allDoors[vinnertall]
-console.log(vinnerDoor)
+const dorer = document.querySelectorAll(".doors > div")
+console.log(dorer)
 
-// Bytt ut bildet til en ferrari:
-const goatImg = vinnerDoor.querySelector(".goat")
-goatImg.src = "media/ferrari.png"
+dorer.forEach(dorDiv => {
+    dorDiv.addEventListener("click", klikkDor)
+});
 
-// Gå igjennom hver dør med en forEach:
-allDoors.forEach(door => {
-    door.addEventListener("click", klikk)
-})
-
-function klikk(event) {
-    console.log("Du klikket på en dør!")
-    // Se hva som finnes på denne eventen:
-    console.log(event)
-
-    // Åpne døren - bare dersom du ikke har åpnet noen dør enda
-    if (doorOpened == false) {
-        const door = event.target
-        door.src = "media/open.png"
-        doorOpened = true
-
-        const goatImg = door.nextElementSibling
-        if (goatImg.src.includes("ferrari")) {
-            document.body.style.backgroundColor = "green"
-        }
+function klikkDor(event) {
+    if (harValgt) {
+        return
     }
+    harValgt = true
+    console.log(event.target)
+    const dorImg = event.target
+    dorImg.src = "media/semiclosed.png"
+
+    const goatImg = dorImg.nextElementSibling
+    console.log(goatImg.src)
+    if (goatImg.src.includes("ferrari")) {
+        console.log("DU VANT")
+        document.body.style.backgroundColor = "palegreen"
+        goatImg.style.width = "300%"
+        goatImg.style.zIndex = "3"
+        goatImg.style.left = "-" + 40 * vinnerTall + "%" // Måtte "hacke" til litt her - for at bilden skulle flyte ut på rett sted.
+        goatImg.style.top = "0"
+    }
+
+    setTimeout(openDor, 600, dorImg)
 }
 
+function openDor(dorImg) {
+    dorImg.src = "media/open.png"
+}
 
+function start(knappElm) {
+    // Få tak i .doors elementet og sett left til 0
+    const doors = document.querySelector(".doorContainer")
+    doors.style.marginLeft = "0"
+    doors.style.height = "auto"
+    knappElm.style.display = "none"
+}
