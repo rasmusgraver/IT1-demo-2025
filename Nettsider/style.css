@@ -21,6 +21,10 @@ header .container {
     align-items: center;
 }
 
+.fa-bars {
+    display: none;
+}
+
 nav ul {
     display: flex;
     align-items: center;
@@ -51,4 +55,14 @@ section:first-of-type {
     margin: auto;
     border: 1px solid black;
     padding: 20px;
+}
+
+@media (width < 700px) {
+    .fa-bars {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
 }
