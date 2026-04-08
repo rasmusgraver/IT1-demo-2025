@@ -21,7 +21,8 @@ header .container {
     align-items: center;
 }
 
-.fa-bars {
+.fa-bars,
+.fa-x {
     display: none;
 }
 
@@ -64,5 +65,20 @@ section:first-of-type {
 
     nav ul {
         display: none;
+    }
+
+    .active nav ul {
+        display: flex;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px;
+    }
+
+    .active .fa-x {
+        display: block;
+        z-index: 5
     }
 }

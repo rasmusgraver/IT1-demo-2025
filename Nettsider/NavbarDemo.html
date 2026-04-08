@@ -24,6 +24,7 @@
                 </ul>
             </nav>
             <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-x"></i>
         </div>
     </header>
     <section id="section1">
@@ -36,6 +37,22 @@
             <h1>Section 2</h1>
         </div>
     </section>
+
+
+    <script>
+        const crossElm = document.querySelector(".fa-x")
+        const burgerElm = document.querySelector(".fa-bars")
+        const headerElm = document.querySelector("header")
+
+        burgerElm.addEventListener("click", function () {
+            headerElm.classList.add("active")
+        })
+
+        crossElm.addEventListener("click", function () {
+            headerElm.classList.remove("active")
+        })
+
+    </script>
 </body>
 
 </html>
