@@ -1,0 +1,421 @@
+/* Importerer fontene vi trenger: */
+@font-face {
+  font-family: "Playwrite";
+  src: url("fonts/PlaywriteIE-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/RobotoCondensed-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Definerer fargene vi trenger: */
+:root {
+  --red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --pink: hsl(350, 100%, 88%);
+  --footer: hsl(168, 34%, 41%);
+  --ink-light: hsl(232, 10%, 55%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+}
+
+/* Hjelper dere litt i gang med å bruke fontene: */
+body {
+  font-family: "Roboto";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playwrite";
+}
+
+
+/* ═══════════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto";
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+nav,
+.nav-links,
+.logo {
+  font-family: "Playwrite";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   LAYOUT UTILITIES
+═══════════════════════════════════════════════════ */
+
+.container {
+  max-width: min(800px, 90%);
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   HEADER & NAV
+═══════════════════════════════════════════════════ */
+
+header {
+  background-image: url('images/image-header.jpg');
+  background-position: center 90%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2.5rem;
+}
+
+.logo img {
+  width: 8rem;
+}
+
+/* Hamburger — desktop hidden, mobile shown via media query */
+.hamburger,
+.close {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--white);
+  font-family: "Playwrite";
+  font-size: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100vh;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background: hsla(0, 0%, 100%, 0.4);
+}
+
+
+/* ── Banner ─────────────────────────────────────── */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: min(600px, 90%);
+  margin: 2rem auto 0;
+  padding: 2rem;
+  border: 2px solid white;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.banner h1 {
+  color: var(--white);
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.75rem;
+}
+
+.banner p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   SECTION 1 — ABOUT
+═══════════════════════════════════════════════════ */
+
+.section-1 .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 3rem auto;
+}
+
+.section-1 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.section-1 h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   SECTION 2
+═══════════════════════════════════════════════════ */
+
+.section-2 .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.section-2 .text {
+  padding: 4rem 2rem;
+  margin-left: -100px;
+  min-height: 80%;
+  background-color: pink;
+  text-align: center;
+  align-self: flex-start;
+  border-radius: 0 0 0 50%;
+}
+
+.section-2 .text h2 {
+  margin-bottom: 2rem;
+}
+
+
+/* ── Shared section styles ──────────────────────── */
+
+.section-1 p,
+.section-2 p {
+  line-height: 1.7;
+}
+
+.section-1 a,
+.section-2 a {
+  font-family: "Playwrite";
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+.section-1 a:hover,
+.section-2 a:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   TESTIMONIALS
+═══════════════════════════════════════════════════ */
+
+.testimonials .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+}
+
+.testimonials h2 {
+  color: var(--ink-light);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.testimonials .cards {
+  display: flex;
+  gap: 2rem;
+}
+
+.testimonials .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.testimonials .card img {
+  width: 5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.testimonials .card p {
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+
+.testimonials .card h3 {
+  font-family: "Playwrite";
+}
+
+.testimonials .card .role {
+  color: var(--ink-light);
+  font-size: 0.875rem;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════ */
+
+footer {
+  background-color: var(--footer);
+  height: 50px;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   MOBILE  (max-width: 700px)
+═══════════════════════════════════════════════════ */
+
+@media (width < 700px) {
+
+  /* Nav */
+  header nav {
+    padding: 2rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .active .hamburger {
+    display: none;
+  }
+
+  .active .close {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: min(200px, 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    background: var(--white);
+    border-radius: 0 1rem 0 0;
+    box-shadow: 10px 5px 20px black;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 300ms ease, transform 300ms ease;
+  }
+
+  .active .nav-links {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    color: black;
+  }
+
+  .nav-links a:hover {
+    background: var(--yellow);
+    color: var(--ink);
+  }
+
+  /* Banner */
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner p {
+    font-size: 0.75rem;
+  }
+
+  /* Section 1 */
+  .section-1 .container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-1 .text {
+    padding: 4rem 2rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .section-1 h2 {
+    font-size: 2rem;
+  }
+
+  /* Section 2 */
+  .section-2 .container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-2 .container .text {
+    margin: 0;
+    border-radius: 0;
+  }
+
+  /* Testimonials */
+  .testimonials .container {
+    padding: 5rem 1.5rem;
+  }
+
+  .testimonials .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Footer */
+  footer .container {
+    flex-direction: column;
+  }
+}
